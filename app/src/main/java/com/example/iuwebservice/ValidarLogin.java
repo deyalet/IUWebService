@@ -23,8 +23,8 @@ public class ValidarLogin extends AppCompatActivity implements Asynchtask {
         Bundle bundle = this.getIntent().getExtras();
 
         Map<String,String> datos = new HashMap<String, String>();
-        WebService ws = new WebService("http://uealecpeterson.net/ws/login.php?user="
-                                        + bundle.getString("user")+"&pass"+ bundle.getString("pass"),
+        WebService ws = new WebService("https://api.androidhive.info/contacts/"
+                                        + bundle.getString("name")+"&pass"+ bundle.getString("pass"),
                                         datos, ValidarLogin.this, ValidarLogin.this);
         ws.execute("GET");
     }
